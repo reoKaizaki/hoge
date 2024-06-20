@@ -9,6 +9,8 @@ class PostController extends Controller
 {
      public function index(Post $post)
     {
-        return $post->get();
+        //$postテーブルの全データを"posts"という変数に入れて、postsフォルダにある"index.blade.php"（View）に渡す
+        return view('posts.index')->with(['posts' => $post->getPaginateByLimit()]);
     }
 }
+?>
