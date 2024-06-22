@@ -23,6 +23,9 @@ use App\Http\Controllers\PostController;
 //"/"を受けとると、PostControllerというクラス内のindexメソッドを返す
 Route::get('/', [PostController::class, 'index']);
 
+//8-4
+Route::get('/posts/create', [PostController::class, 'create']);
+
 //8-3
 // '/posts/{対象データのID}'にGetリクエストが来たら、PostControllerのshowメソッドを実行する
 Route::get('/posts/{post}', [PostController::class ,'show']);
