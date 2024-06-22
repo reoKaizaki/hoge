@@ -11,8 +11,9 @@
         <div class='posts'>
             @foreach ($posts as $post) <!-- $posts内の配列データを$postという変数名で取得できる -->
                 <div class='post'>
-                    <h2 class='title'>{{ $post->title }}</h2>
-                    <p class='body'>{{ $post->body }}</p>
+                    <h2 class='title'>
+                        <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                    </h2>
                 </div>
             @endforeach
         </div>
