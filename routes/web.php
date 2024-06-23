@@ -25,6 +25,7 @@ Route::get('/', [PostController::class, 'index']);
 
 //8-4
 Route::get('/posts/create', [PostController::class, 'create']);
+Route::post('/posts', [PostController::class, 'store']);
 
 //8-3
 // '/posts/{対象データのID}'にGetリクエストが来たら、PostControllerのshowメソッドを実行する
