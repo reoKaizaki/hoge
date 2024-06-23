@@ -22,7 +22,7 @@ class PostController extends Controller
     */
     public function show(Post $post)
     {
-        //'post'はbladeファイルで使う変数。中身は$postはPostデータのインスタンス。
+        //'post'はbladeファイルで使う変数。中身は任意のidにおけるPostデータをインスタンス化した$post。
         return view('posts.show')->with(['post' => $post]);
     }
     
@@ -50,6 +50,12 @@ class PostController extends Controller
         $post->fill($input_post)->save();
         
         return redirect('/posts/' . $post->id);
+    }
+    
+    public function delete(Post $post)
+    {
+        $post->delete();
+        return redirect('/');
     }
 }
 ?>
