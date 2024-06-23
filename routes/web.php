@@ -30,3 +30,7 @@ Route::post('/posts', [PostController::class, 'store']);
 //8-3
 // '/posts/{対象データのID}'にGetリクエストが来たら、PostControllerのshowメソッドを実行する
 Route::get('/posts/{post}', [PostController::class ,'show']);
+
+//8-5
+Route::get('/posts/{post}/edit', [PostController::class, 'edit']);
+Route::put('/posts/{post}', [PostController::class, 'update']);
