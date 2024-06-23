@@ -34,3 +34,6 @@ Route::get('/posts/{post}', [PostController::class ,'show']);
 //8-5
 Route::get('/posts/{post}/edit', [PostController::class, 'edit']);
 Route::put('/posts/{post}', [PostController::class, 'update']);
+
+//8-6
+Route::delete('/posts/{post}', [PostController::class,'delete']);
