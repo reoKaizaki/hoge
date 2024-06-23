@@ -8,6 +8,7 @@
     </head>
     <body>
         <h1>Blog Name</h1>
+        <a href="/posts/create">create</a>
         <div class='posts'>
             @foreach ($posts as $post) <!-- $posts内の配列データを$postという変数名で取得できる -->
                 <div class='post'>
